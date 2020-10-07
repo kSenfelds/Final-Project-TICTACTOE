@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApptest1
 {
-    partial class Form2
+    partial class SaveForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fileNameBox = new System.Windows.Forms.TextBox();
             this.Save = new System.Windows.Forms.Button();
             this.Cancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -43,13 +43,12 @@
             this.label1.Text = "Enter filename =>";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // fileNameBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(118, 12);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(132, 20);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            this.fileNameBox.Location = new System.Drawing.Point(118, 12);
+            this.fileNameBox.Name = "fileNameBox";
+            this.fileNameBox.Size = new System.Drawing.Size(132, 20);
+            this.fileNameBox.TabIndex = 1;
             // 
             // Save
             // 
@@ -71,16 +70,16 @@
             this.Cancel.UseVisualStyleBackColor = true;
             this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
-            // Form2
+            // SaveForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(466, 138);
             this.Controls.Add(this.Cancel);
             this.Controls.Add(this.Save);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.fileNameBox);
             this.Controls.Add(this.label1);
-            this.Name = "Form2";
+            this.Name = "SaveForm";
             this.Text = "Form2";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -90,7 +89,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox fileNameBox;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Cancel;
     }

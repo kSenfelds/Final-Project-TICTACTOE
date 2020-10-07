@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApptest1
 {
-    public partial class Form2 : Form
+    public partial class SaveForm : Form
     {
-        public Form2()
+        public SaveForm()
         {
             InitializeComponent();
         }
@@ -25,23 +25,17 @@ namespace WindowsFormsApptest1
 
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
-            
-        }
-
         private void Save_Click(object sender, EventArgs e)
         {
             try
             {
-                StreamWriter sw = new StreamWriter(_pathname + textBox1.Text + ".txt");
+                StreamWriter sw = new StreamWriter(_pathname + fileNameBox.Text + ".txt");
                 for (int i = 0; i<MainForm.winList.Count; i++)
                 {
                     sw.WriteLine(MainForm.winList[i]);
                 }
                 sw.Close();
-                savedFiles.Add(textBox1.Text);
+                savedFiles.Add(fileNameBox.Text);
                 this.Close();
             }
             catch

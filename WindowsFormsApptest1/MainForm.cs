@@ -308,14 +308,14 @@ namespace WindowsFormsApptest1
 
         private void SaveFile_Click(object sender, EventArgs e)
         {
-            SaveForm form2 = new SaveForm();
-            form2.ShowDialog();
+            SaveForm saveWindow = new SaveForm();
+            saveWindow.ShowDialog();
         }
 
         private void History_Click(object sender, EventArgs e)
         {
-            LoadForm form3 = new LoadForm();
-            form3.ShowDialog();
+            LoadForm loadWindow = new LoadForm();
+            loadWindow.ShowDialog();
         }
     }
 }
